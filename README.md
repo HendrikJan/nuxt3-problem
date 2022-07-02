@@ -1,42 +1,30 @@
-# Nuxt 3 Minimal Starter
+# Reproduce the error
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+1. Start Docker-compose with this command: `docker compose up`
+2. Log in to the my-nodejs Docker container: `docker exec -it my-nodejs bash`
+3. Now inside the my-nodejs container start Nuxt: `npm run dev`
 
-## Setup
+Now go in your browser to `http://localhost:7777/`
 
-Make sure to install the dependencies:
+4. See that the default Nuxt3 page is loaded
 
-```bash
-# yarn
-yarn install
+Open your developer tools in the browser and reload
 
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+5. See this error (in Chrome Console):
+```
+Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "text/html". Strict MIME type checking is enforced for module scripts per HTML spec.
 ```
 
-## Development Server
+6. Also see  (in Chrome network tab) that the contents of `http://localhost:7777/_nuxt/entry.mjs` does not contain javascript but contains this:
+```html
+<!DOCTYPE html>
+<html  data-head-attrs="">
 
-Start the development server on http://localhost:3000
+<head >
+  <title>Welcome to Nuxt 3!</title>...
+</head>
 
-```bash
-npm run dev
+<body  data-head-attrs="">...</body>
+
+</html>
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
