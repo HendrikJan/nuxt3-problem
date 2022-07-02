@@ -1,0 +1,18 @@
+{
+  "name": "nuxt3-problem",
+  "version": "1.0.0",
+  "description": "demonstration and reproduction of a nuxt3 problem",
+  "main": "index.js",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "author": "H.J. van Meerveld",
+  "license": "ISC",
+  "dependencies": {
+    "nuxi": "^3.0.0-rc.4",
+    "nuxt": "3.0.0-rc.4"
+  }
+}
