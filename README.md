@@ -6,7 +6,7 @@
 
 Now go in your browser to `http://localhost:7777/`
 
-4. See that the default Nuxt3 page is loaded
+4. See that the default Nuxt3 page does not load (set `ssr: true` and see the default Nuxt3 page)
 
 Open your developer tools in the browser and reload
 
@@ -18,13 +18,15 @@ Failed to load module script: Expected a JavaScript module script but the server
 6. Also see  (in Chrome network tab) that the contents of `http://localhost:7777/_nuxt/entry.mjs` does not contain javascript but contains this:
 ```html
 <!DOCTYPE html>
-<html  data-head-attrs="">
+<html >
 
 <head >
-  <title>Welcome to Nuxt 3!</title>...
+  
 </head>
 
-<body  data-head-attrs="">...</body>
+<body >
+  <div id="__nuxt"></div><script>window.__NUXT__={serverRendered:false,config:{public:{},app:{baseURL:"\u002F",buildAssetsDir:"\u002F_nuxt\u002F",cdnURL:""}}}</script><script type="module" src="/_nuxt/@vite/client"></script><script type="module" src="/_nuxt/entry.mjs"></script>
+</body>
 
 </html>
 ```
