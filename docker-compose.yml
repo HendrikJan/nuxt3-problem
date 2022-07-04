@@ -34,10 +34,7 @@ services:
       - "8888:80"
       - "4444:443"
     volumes:
-      - ./apps/nuxt-app:/var/www/html/nuxt-app
       - ./docker/nginx/ssl:/etc/ssl:ro
-      - ./docker/nginx/auth:/usr/local/openresty/auth
-      # - ./docker/nginx/nginx.conf:/usr/local/openresty/nginx.conf
       - ./docker/nginx/sites-dev/jurassicjs.eu.conf:/opt/bitnami/openresty/nginx/conf/server_blocks//jurassicjs.eu.conf:ro
     networks:
       - default
