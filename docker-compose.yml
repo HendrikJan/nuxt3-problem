@@ -23,13 +23,13 @@ services:
     networks:
       - default
   mynginx:
-    image: bitnami/openresty:latest
+    # image: bitnami/openresty:latest
     hostname: mynginx
     container_name: my-nginx
-    # build:
-    #   context: .
-    #   dockerfile: docker/nginx.dockerfile
-    working_dir: /var/www/html
+    build:
+      context: .
+      dockerfile: docker/nginx.dockerfile
+    # working_dir: /var/www/html
     ports:
       - "8888:80"
       - "4444:443"
