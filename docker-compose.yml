@@ -22,3 +22,19 @@ services:
       - ./docker/apache/extra:/usr/local/apache2/conf/extra
     networks:
       - default
+  mynginx:
+    image: nginx:1.15
+    hostname: mynginx
+    container_name: my-nginx
+    working_dir: /var/www/html
+    ports:
+      - "8888:80"
+      - "4444:443"
+    volumes:
+      - ./apps/nuxt-app:/var/www/html/nuxt-app
+      - ./docker/nginx/ssl:/etc/ssl:ro
+      - ./docker/nginx/auth:/etc/nginx/auth
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx/sites-dev:/etc/nginx/sites-enabled
+    networks:
+      - default
