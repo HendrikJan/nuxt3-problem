@@ -1,8 +1,8 @@
 # Reproduce the error
 
 1. Start Docker-compose with this command: `docker compose up`
-2. Log in to the my-nodejs Docker container: `docker exec -it my-nodejs bash`
-3. Now inside the my-nodejs container start Nuxt: `npm run dev`
+2. Log in to the mynodejs Docker container: `docker exec -it mynodejs bash`
+3. Now inside the mynodejs container start Nuxt: `npm run dev`
 
 Now go in your browser to `http://localhost:7777/`
 

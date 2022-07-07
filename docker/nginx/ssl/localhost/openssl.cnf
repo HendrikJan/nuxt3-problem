@@ -311,4 +311,4 @@ authorityKeyIdentifier=keyid,issuer:always
 proxyCertInfo=critical,language:id-ppl-anyLanguage,pathlen:3,policy:foo
 
 [ alt_names ]
-DNS.1 = jurassicjs.eu
+DNS.1 = localhost
