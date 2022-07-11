@@ -1,3 +1,5 @@
+The issue can be found here: https://github.com/vitejs/vite/issues/8941 (closed)
+
 # Reproduce the error
 
 1. Start Docker-compose with this command: `docker compose up`
