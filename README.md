@@ -21,3 +21,5 @@ Nuxt CLI v3.0.0-rc.6                                                         07:
   '/var/app/nitro.json'
 ]
 ```
+
+5. Run `build` and `start` outside Docker and see that there is no problem.
