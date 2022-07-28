@@ -2,7 +2,7 @@ version: '3.2'
 services:
   mynodejs:
     hostname: mynodejs
-    container_name: my-nodejs
+    container_name: mynodejs
     build:
       context: .
       dockerfile: docker/nodejs.dockerfile
@@ -12,7 +12,7 @@ services:
       - default
   myapache:
     hostname: myapache
-    container_name: my-apache
+    container_name: myapache
     build:
       context: .
       dockerfile: docker/apache.dockerfile
