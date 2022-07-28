@@ -7,12 +7,13 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "start": "nuxt start"
   },
   "author": "H.J. van Meerveld",
   "license": "ISC",
   "dependencies": {
-    "nuxi": "^3.0.0-rc.4",
+    "nuxi": "^3.0.0-rc.6",
     "nuxt": "3.0.0-rc.4"
   }
 }
